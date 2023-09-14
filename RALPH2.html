@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        #eventContainer {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button, input[type="text"], p, div {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 18px;
+            width: 80%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            background-color: #2ecc71;
+            color: white;
+            text-align: center;
+        }
+
+        div {
+            background-color: #e74c3c;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #animationDiv {
+            width: 100px;
+            height: 100px;
+            background-color: #e74c3c;
+            margin: 20px auto;
+            animation-duration: 2s;
+            animation-name: colorChange;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: #e74c3c;
+            }
+            50% {
+                background-color: #f39c12;
+            }
+            100% {
+                background-color: #e74c3c;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Events</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="RALPH.html">ONE PIECE</a></li>
+            <li><a href="RALPH2.html">JAVA SCIPT</a></li>
+        </ul>
+    </nav>
+    <div id="eventContainer">
+        <button onclick="alert('1. Click event triggered')">Click Me</button>
+        <input type="text" onblur="alert('2. Blur event triggered')" placeholder="Blur Me">
+        <input type="text" onchange="alert('3. Change event triggered')" placeholder="Change Me">
+        <p ondblclick="alert('4. Double Click event triggered')">Double Click Me</p>
+        <input type="text" onfocus="alert('5. Focus In event triggered')" onblur="alert('5. Focus Out event triggered')" placeholder="Focus Me">
+        <p onmouseover="alert('6. Mouse Hover event triggered')">Mouse Hover Me</p>
+        <div onclick="alert('7. Custom Event (Click) triggered')" onresize="alert('7. Custom Event (Resize) triggered')">Click or Resize Me</div>
+        <div id="animationDiv"></div>
+    </div>
+
+    <script>
+        const animationDiv = document.getElementById("animationDiv");
+
+        // Event listener for animationstart and animationend events
+        animationDiv.addEventListener("animationstart", () => {
+            alert("8. Animation Start event triggered");
+        });
+
+        animationDiv.addEventListener("animationend", () => {
+            alert("9. Animation End event triggered");
+        });
+    </script>
+</body>
+</html>

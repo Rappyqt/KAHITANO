@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RALPH.css">
+    <title>Your Website</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="RALPH.html">ONE PIECE</a></li>
+            <li><a href="RALPH2.html">JAVA SCRIPT</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>ONE PIECE</h1>
+    </header>
+
+    <div class="image-container">
+        <div class="image">
+            <img src="sanji.jpg" alt="Image 1">
+            <button onclick="changeImage1()" class="button">Change Image</button>
+        </div>
+        <div class="image">
+            <img src="luffy.jpg" alt="Image 2">
+            <button onclick="changeImage2()" class="button">Change Image</button>
+        </div>
+        <div class="image">
+            <img src="zorro.jpg" alt="Image 3">
+            <button onclick="changeImage3()" class="button">Change Image</button>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <div class="video">
+            <iframe width="350" height="350" src="https://www.youtube.com/embed/0VLYbRBv8Qw?si=IRtgw-aZDVyZgIh-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button onclick="changeVideo1()" class="button">Change Video</button>
+        </div>
+        <div class="video">
+            <iframe width="350" height="350" src="https://www.youtube.com/embed/AfZmNBonIeI?si=ucicIOoda5QEZ61P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button onclick="changeVideo2()" class="button">Change Video</button>
+        </div>
+        <div class="video">
+            <iframe width="350" height="350" src="https://www.youtube.com/embed/ZWbta8_fa4w?si=Z64GXva_sPY1YF2-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button onclick="changeVideo3()" class="button">Change Video</button>
+        </div>
+    </div>
+    <script>
+        function changeImage1() {
+            var img = document.querySelector('.image img');
+            img.src = 'queen.jpg';
+        }
+
+        function changeImage2() {
+            var img = document.querySelectorAll('.image img')[1];
+            img.src = 'kaido.jpg';
+        }
+
+        function changeImage3() {
+            var img = document.querySelectorAll('.image img')[2];
+            img.src = 'king.jpg';
+        }
+
+        function changeVideo1() {
+        var iframe = document.querySelectorAll('.video iframe')[0];
+        iframe.src = 'https://www.youtube.com/embed/q-uRlALd-xU?si=YpKvxZ89NcAiEnfv';
+    }
+
+        function changeVideo2() {
+         var iframe = document.querySelectorAll('.video iframe')[1];
+         iframe.src = 'https://www.youtube.com/embed/hELlEPwxVLo?si=oFflGiBHQ1KpvGJ';
+    }       
+
+        function changeVideo3() {
+        var iframe = document.querySelectorAll('.video iframe')[2];
+        iframe.src = 'https://www.youtube.com/embed/LRzvSWRa9V8?si=jXlPjFW_qIjRjk30';
+    }
+    </script>
+</body>
+</html>
